@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+hr.headerline {
+  border: 1px solid blue;
+  border-radius: 1px;
+  width:20%;
+  margin-left:0;
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:  	#F5F5F5;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  
+}
+
+.sidebarMenu{
+  text-align: center;
+  
+}
+
+.sidebarMenu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebarMenu a:hover {
+  color: #000000;
+  
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.content{
+  padding-top:10%;
+}
+
+.openbtn {
+  width: 28px;
+  height: 28px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAVElEQVRIie2SQQoAIQzE4j5UW1/iz/Uiy6LXFnRpoNcOhEBwCglQoBmdzp8vCnTjk++AOAzkVVExVJRXRffzABXHiirOFXlkulUkhoqioqgoKvoVA2ZntpmlWlSxAAAAAElFTkSuQmCC);
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  margin-left: 250px;
+}
+
+#home,#publications,#experience,#contact{
+  display:none;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+</head>
+<body onload="showContent('home')">
+
+<div id="mySidebar" class="sidebar">
+  <button class="openbtn" onclick="toggleNav()" ></button>
+  <div style="height: 20%;"></div>
+  <div id="mySidebarMenu" class="sidebarMenu">
+    <a href="javascript:showContent('home')">Home</a>
+    <a href="javascript:showContent('publications')">Publications</a>
+    <a href="javascript:showContent('experience')">Experience</a>
+    <a href="javascript:showContent('contact')">Contact</a>
+  </div>
+  
+</div>
+
+<div id="main">
+  <div id="home">
+    <center>
+      
+      <iframe style="padding-top:5%;" src="https://www.youtube.com/embed/uAXkepv62Fc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <br />
+      <a href="https://www.youtube.com/channel/UCYpwM9L1goyyjwjwo4lp4Yg">Watch more videos on YouTube</a>
+
+      <h1>About</h1>
+      
+      <p style="width: 50%;">
+        A S M Asadujjaman is pursuing his PhD with the Audit Ready Cloud (ARC) group at Concordia Institute for Information Systems Engineering (CIISE). 
+        Previously, he completed MSc in Information and Communication Technology from Bangladesh University of Engineering and Technology (BUET), Dhaka. 
+        Before joining Concordia University as a PhD Student, he worked as a Lead Engineer  
+        in Banglalink Digital Communications Limited, Dhaka, Bangladesh where he led IP Network Planning during transformation into 4G in 2018. 
+        His research is in the area of Cloud Computing and Network Function Virtualization (NFV) security.
+      </p>
+      <a href="javascript:showContent('publications')">Publications</a>
+  </center>
+  </div>
+  <div id="publications">
+    <h1>Publications</h1>
+    <hr class="headerline">
+    <table>
+
+      <tr valign="top">
+      <td align="right" class="bibtexnumber">
+      [<a name="lopez2019amaru">1</a>]
+      </td>
+      <td class="bibtexitem">
+      Diego Lopez-Pajares, Joaquin Alvarez-Horcajo, Elisa Rojas, <b>ASM Asadujjaman</b>, and
+        Isaias Martinez-Yelmo.
+       Amaru: Plug&amp;play resilient in-band control for sdn.
+       <em>IEEE Access</em>, 7:123202--123218, 2019.
+      [&nbsp;<a href="bibtex_bib.html#lopez2019amaru">bib</a>&nbsp;]
+      
+      </td>
+      </tr>
+      
+      
+      <tr valign="top">
+      <td align="right" class="bibtexnumber">
+      [<a name="asadujjaman2018flexible">2</a>]
+      </td>
+      <td class="bibtexitem">
+      <b>ASM Asadujjaman</b> and Mohammad&nbsp;Shah Alam.
+       A flexible and scalable ethernet architecture for telecommunication
+        transport networks.
+       <em>International Journal of Internet Protocol Technology</em>,
+        11(4):219--231, 2018.
+      [&nbsp;<a href="bibtex_bib.html#asadujjaman2018flexible">bib</a>&nbsp;]
+      
+      </td>
+      </tr>
+      
+      
+      <tr valign="top">
+      <td align="right" class="bibtexnumber">
+      [<a name="asadujjaman2018fast">3</a>]
+      </td>
+      <td class="bibtexitem">
+      <b>ASM Asadujjaman</b>, Elisa Rojas, Mohammad&nbsp;Shah Alam, and Suryadipta Majumdar.
+       Fast control channel recovery for resilient in-band openflow
+        networks.
+       In <em>2018 4th IEEE Conference on Network Softwarization and
+        Workshops (NetSoft)</em>, pages 19--27. IEEE, 2018.
+      [&nbsp;<a href="bibtex_bib.html#asadujjaman2018fast">bib</a>&nbsp;]
+      
+      </td>
+      </tr>
+      
+      
+      <tr valign="top">
+      <td align="right" class="bibtexnumber">
+      [<a name="asadujjaman2017enhancement">4</a>]
+      </td>
+      <td class="bibtexitem">
+      <b>ASM Asadujjaman</b>.
+       Enhancement of ethernet ring protection switching protocol for
+        improving performance of carrier networks.
+       2017.
+      [&nbsp;<a href="bibtex_bib.html#asadujjaman2017enhancement">bib</a>&nbsp;]
+      
+      </td>
+      </tr>
+      
+      
+      <tr valign="top">
+      <td align="right" class="bibtexnumber">
+      [<a name="royfiber">5</a>]
+      </td>
+      <td class="bibtexitem">
+      TK&nbsp;Roy, MA&nbsp;Mahmud, <b>ASM Asadujjaman</b>, MO&nbsp;Khyam, and MNU Mondal.
+       Fiber optic link design for multilink systems.
+      [&nbsp;<a href="bibtex_bib.html#royfiber">bib</a>&nbsp;]
+      
+      </td>
+      </tr>
+      
+      
+      <tr valign="top">
+      <td align="right" class="bibtexnumber">
+      [<a name="asadujjaman2016fcsea">6</a>]
+      </td>
+      <td class="bibtexitem">
+      <b>ASM Asadujjaman</b>, Shafika&nbsp;Showkat Moni, and Mohammad&nbsp;Shah Alam.
+       Fcsea: A floodless carrier-grade scalable ethernet architecture.
+       In <em>2016 9th International Conference on Electrical and Computer
+        Engineering (ICECE)</em>, pages 427--430. IEEE, 2016.
+      [&nbsp;<a href="bibtex_bib.html#asadujjaman2016fcsea">bib</a>&nbsp;]
+      
+      </td>
+      </tr>
+      
+      
+      <tr valign="top">
+      <td align="right" class="bibtexnumber">
+      [<a name="asadujjaman2016optimization">7</a>]
+      </td>
+      <td class="bibtexitem">
+      <b>ASM Asadujjaman</b>, Mohammad&nbsp;Shah Alam, and Shafika&nbsp;Showkat Moni.
+       Optimization of ethernet ring protection switching for adaptive
+        modulation in carrier access network.
+       In <em>2016 19th International Conference on Computer and
+        Information Technology (ICCIT)</em>, pages 19--24. IEEE, 2016.
+      [&nbsp;<a href="bibtex_bib.html#asadujjaman2016optimization">bib</a>&nbsp;]
+      
+      </td>
+      </tr>
+      </table>
+      <p>
+        <a href="https://scholar.google.com/citations?user=hR3oekIAAAAJ&hl=en">See more details on Google Scholar</a>
+        <a href="javascript:showContent('experience')">Experience</a>
+      </p>
+
+  </div>
+  <div id="experience">
+    <h1>Experience</h1>
+    <hr class="headerline">
+    <ul>
+      <li>Lead Engineer, Banglalink Digital Communications Ltd., Dhaka, Bangladesh.</li>
+    </ul>
+    <a href="javascript:showContent('contact')">Contact Information</a>
+  </div>
+  <div class="content" id="contact">
+    <center>
+    <h1>Contact</h1>   
+    <p>
+      <b>Address</b><br />
+      10.401-1515 Saint-Catherine St W, Montreal, QC H3G 2W1<br />
+      <b>e-mail</b><br />
+      <img style="background-color:blue;" width="300px" src="contact.png" />
+    </p>
+    <a href="javascript:showContent('home')">Home</a>
+    </center>
+  </div>
+</div>
+
+<script>
+
+function showContent(divId){
+  if(document.getElementById("mySidebar").offsetWidth == "50"){
+    document.getElementById("mySidebarMenu").style.display = "inline";
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  mainContent=document.getElementById("main");
+  for(i=0;i<mainContent.children.length;i++){
+    mainContent.children[i].style.display="none";
+  }
+  document.getElementById(divId).style.display="inline";
+}
+
+function showAll(){
+  mainContent=document.getElementById("main");
+  for(i=0;i<mainContent.children.length;i++){
+    mainContent.children[i].style.display="inline";
+  }
+}
+
+function toggleNav() {
+  if(document.getElementById("mySidebar").offsetWidth == "50"){
+    document.getElementById("mySidebarMenu").style.display = "inline";
+    
+    document.getElementById("mySidebar").style.width = "250px";
+    
+    document.getElementById("main").style.marginLeft = "250px";
+    showContent("home");
+  }
+  else{
+    document.getElementById("mySidebarMenu").style.display = "none";
+    document.getElementById("mySidebar").style.width = "50px";
+    
+    document.getElementById("main").style.marginLeft= "50px";    
+    showAll();
+  }
+  
+}
+</script>
+   
+</body>
+</html> 
