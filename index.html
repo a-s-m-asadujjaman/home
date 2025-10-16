@@ -1,410 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>A S M Asadujjaman&#39;s Home Page</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A S M Asadujjaman - Academic Portfolio</title>
 <style>
-
-
-
-*{font-family:"Roboto Slab", serif;}
-
-hr.headerline {
-  border: 1px solid blue;
-  border-radius: 1px;
-  width:20%;
-  margin-left:0;
+:root {
+  --accent: #2b6cb0;
+  --light-gray: #f8f9fa;
+  --text-color: #222;
+  --link-hover: #1a4f8b;
+  --max-width: 850px;
 }
-
-.sidebar {
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color:  	#7fcdff	;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-  
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: white;
+  color: var(--text-color);
+  line-height: 1.6;
 }
-
-.sidebarMenu{
-  text-align: center;
-  
+header {
+  background: var(--accent);
+  color: white;
+  padding: 1rem 0;
 }
-
-.sidebarMenu a {
-  padding: 8px 8px 8px 32px;
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+header nav a {
+  color: white;
   text-decoration: none;
-  font-size: 25px;
-  color: black;
-  display: block;
-  transition: 0.3s;
+  font-weight: 600;
 }
-
-.sidebarMenu a:hover {
-  color: #def3f6;
-  
+header nav a:hover {
+  text-decoration: underline;
 }
-
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+section {
+  padding: 3rem 1rem;
+  border-bottom: 1px solid #ddd;
 }
-
-.content{
-  padding-top:10%;
+section h1 {
+  font-family: "Merriweather", serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
 }
-
-.openbtn {
-  width: 28px;
-  height: 28px;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAVElEQVRIie2SQQoAIQzE4j5UW1/iz/Uiy6LXFnRpoNcOhEBwCglQoBmdzp8vCnTjk++AOAzkVVExVJRXRffzABXHiirOFXlkulUkhoqioqgoKvoVA2ZntpmlWlSxAAAAAElFTkSuQmCC);
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
-
-.openbtn:hover {
-  background-color: #444;
+p, li {
+  font-size: 1rem;
 }
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-  margin-left: 250px;
+a {
+  color: var(--accent);
+  text-decoration: none;
 }
-
-#home,#publications,#experience,#contact{
-  display:none;
+a:hover {
+  color: var(--link-hover);
 }
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
+iframe {
+  width: 100%;
+  max-width: 420px;
+  height: 240px;
+  margin: 1rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td {
+  padding-bottom: 1rem;
+  vertical-align: top;
+}
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--light-gray);
+  font-size: 0.9rem;
+  color: #666;
+}
+@media (max-width: 600px) {
+  iframe {
+    width: 100%;
+    height: 200px;
+  }
 }
 </style>
 </head>
-<body onload="showContent('home')">
+<body>
 
-<div id="mySidebar" class="sidebar">
-  <button class="openbtn" onclick="toggleNav()" ></button>
-  <div style="height: 20%;"></div>
-  <div id="mySidebarMenu" class="sidebarMenu">
-    <a href="javascript:showContent('home')">Home</a>
-    <a href="javascript:showContent('publications')">Publications</a>
-    <a href="javascript:showContent('experience')">Experience</a>
-    <a href="javascript:showContent('activities')">Activities</a>
-    <a href="javascript:showContent('contact')">Contact</a>
-  </div>
-  
-</div>
+<header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#publications">Publications</a>
+    <a href="#experience">Experience</a>
+    <a href="#activities">Activities</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-<div id="main">
-  <div id="home">
-    <center>
-      
-      <iframe style="padding-top:5%;" src="https://www.youtube.com/embed/uAXkepv62Fc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <iframe style="padding-top:5%;" src="https://www.youtube.com/embed/knuQP6M2Mis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <br />
-      <a href="https://www.youtube.com/channel/UCYpwM9L1goyyjwjwo4lp4Yg">Watch more videos on YouTube</a>
-
-      <h1>About</h1>
-      
-      <p style="width: 50%;">
-        A S M Asadujjaman is currently a researcher at the Federal University of Campina Grande (UFCG) <img src="brazil.png" alt="Brazil Flag" 
-     style="height:1em; width:auto; vertical-align:-0.15em;">. Previously he obtained his PhD in Information Systems Engineering with the <a href="http://arc.encs.concordia.ca/">Audit Ready Cloud (ARC)</a> group from Concordia University <img src="canada.png" alt="Maple Leaf" 
-     style="height:1em; width:auto; vertical-align:-0.15em;">
-        and MSc in Information and Communication Technology from Bangladesh University of Engineering and Technology (BUET) <img src="bangladesh.png" alt="Bangladesh Flag" 
-     style="height:1em; width:auto; vertical-align:-0.15em;">. His current research is in IT security.
-      </p>
-      <a href="javascript:showContent('publications')">Publications</a><br />
-      <a href="https://github.com/a-s-m-asadujjaman">Browse projects on GitHub</a>
+<main>
+<section id="home">
+  <center>
+    <iframe src="https://www.youtube.com/embed/uAXkepv62Fc" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/knuQP6M2Mis" frameborder="0" allowfullscreen></iframe>
+    <p><a href="https://www.youtube.com/channel/UCYpwM9L1goyyjwjwo4lp4Yg">Watch more videos on YouTube</a></p>
   </center>
-  </div>
-  <div id="publications">
-    <h1>Publications</h1>
-    <hr class="headerline">
-    <table>
 
-      <tr valign="top">
-      <td align="right" class="bibtexnumber">
-      [<a name="asadujjaman2024securing">1</a>]
-      </td>
-      <td class="bibtexitem">
-      <b>A S M Asadujjaman</b>, Eduardo Falcão, Andrey Brito, Elisa Rojas.
-       <a href="" target="_blank">Surviving Zero-day Attacks Using Spatial Specialization.</a>
-       Computers &amp; Security, Elsevier, 2025 (Accepted).
-      [&nbsp;<a href="bibtex_bib.html#asadujjaman2024securing">bib</a>&nbsp;]
-        [&nbsp;<a href="">DOI (Appearing soon)</a>&nbsp;]
-      <!--<meta name="Abstract of the paper titled Surviving Zero-day Attacks Using Spatial Specialization" content="Applications and OS kernels contain numerous vulnerabilities that are being discovered, reported, exploited, and patched on a regular basis. The discovery of vulnerabilities may be done by both security professionals and malicious actors. Sometimes, once a vulnerability is discovered by malicious actors, it may not be known to security professionals and remain unpatched for years. %Attacks that exploit such unknown vulnerabilities are known as zero-day attacks. 
-This leaves even systems that require a high level of security and adopt strong threat models, such as those based on confidential computing, vulnerable to attacks, including remote arbitrary code execution. Control flow enforcement solutions may fail to prevent such attacks due to the vulnerability being related to part of an unusual but valid program control flow. Once such attacks are successful, an attacker may inflict further damage by performing secondary actions such as privilege escalation or container escape. Existing solutions fail to defend against such attacks in many cases. In this work, we propose a novel approach, called \textit{spatial specialization}, to protect cloud VMs and containers from zero-day attacks exploiting unknown vulnerabilities. Spatial specialization works by limiting the execution of system calls according to where, in the address space, they are required by the application. Our approach is applicable to server applications as well as software tools. We implement our solution in C, and through experimental evaluations, we show that it can prevent up to 96 percent of attacks, while the state-of-the-art solution can only prevent 66 percent. Through performance benchmarking, we show that our solution has a reasonably low overhead.">-->
-      </td>
-      </tr>
+  <h1>About</h1>
+  <p>
+    A S M Asadujjaman is currently a researcher at the Federal University of Campina Grande (UFCG) 🇧🇷. 
+    Previously he obtained his PhD in Information Systems Engineering with the 
+    <a href="http://arc.encs.concordia.ca/">Audit Ready Cloud (ARC)</a> group from Concordia University 🇨🇦 
+    and MSc in Information and Communication Technology from Bangladesh University of Engineering and Technology (BUET) 🇧🇩.
+    His current research is in IT security.
+  </p>
+  <p>
+    <a href="#publications">Publications</a> |
+    <a href="https://github.com/a-s-m-asadujjaman">Browse projects on GitHub</a>
+  </p>
+</section>
 
-      <tr valign="top">
-      <td align="right" class="bibtexnumber">
-      [<a name="asadujjaman2024securing">2</a>]
-      </td>
-      <td class="bibtexitem">
-      <b>A S M Asadujjaman</b>, Davi Pontes, Eduardo Falcão, Andrey Brito.
-       <a href="papers/asadujjaman2024securing.pdf" target="_blank">Securing Confidential VMs in Public Clouds.</a>
-       In <em>15th IEEE International Conference on Cloud Computing Technology and Science (CloudCom)</em>, IEEE, 2024.
-      [&nbsp;<a href="bibtex_bib.html#asadujjaman2024securing">bib</a>&nbsp;]
-      [&nbsp;<a href="papers/asadujjaman2024securing.pdf">PDF</a>&nbsp;]
-      [&nbsp;<a href="https://youtu.be/knuQP6M2Mis?si=UNB-5GuwS2JS5dV4">Presentation</a>&nbsp;]
-      <meta name="Abstract of the paper titled Securing Confidential VMs in Public Clouds" content="Cloud providers and CPU vendors are working together to deliver the promise of Confidential Computing through the Confidential Virtual Machine (CVM) offerings. However, the steps required to verify the authenticity of CVMs are still unclear. Technical specifications are difficult to follow, and the implementations by the cloud providers are incomplete. Currently, there is no serviceable procedure to ensure desired security properties for CVM users. In this work, our goal is to secure confidential VMs by facilitating their authenticity verification and addressing security issues arising from their incomplete implementations. To that end, firstly, we identify a set of necessary attestation properties and formulate guidelines to verify them. Secondly, we show why the current offerings are insufficient to guarantee security and what else is needed. In that regard, as Intel has released its CVM technology recently, we focus our attention on the Intel TDX CVM offerings. After analyzing and evaluating Intel TDX services from major cloud providers, we have identified the possibility of a malware injection attack and designed a solution to detect it. Through experiments, we show that our solution does not add any significant overhead.">
-      </td>
-      </tr>
+<section id="publications">
+  <h1>Publications</h1>
+  <table>
+    <tr><td><b>[1]</b> A S M Asadujjaman, Eduardo Falcão, Andrey Brito, Elisa Rojas. <i>Surviving Zero-day Attacks Using Spatial Specialization.</i> Computers & Security, Elsevier, 2025 (Accepted).</td></tr>
+    <tr><td><b>[2]</b> A S M Asadujjaman, Davi Pontes, Eduardo Falcão, Andrey Brito. <a href="papers/asadujjaman2024securing.pdf" target="_blank">Securing Confidential VMs in Public Clouds.</a> In 15th IEEE CloudCom, IEEE, 2024. <a href="https://youtu.be/knuQP6M2Mis?si=UNB-5GuwS2JS5dV4">Presentation</a></td></tr>
+    <tr><td><b>[3]</b> Davi Pontes, Fernando Silva, Anderson Melo, Carlos Pamplona Filho, A S M Asadujjaman, Eduardo Falcão, Andrey Brito. Multi-Platform and Vault-Free Attestation of Confidential VMs. ACM, 2024.</td></tr>
+    <tr><td><b>[4]</b> Momen Oqaily et al. <i>A Tenant-based Two-stage Approach to Auditing...</i> ACM CODASPY, 2023.</td></tr>
+    <tr><td><b>[5]</b> A S M Asadujjaman et al. 5GFIVer: Functional Integrity Verification for 5G Cloud-native Network Functions. IEEE CloudCom, 2022.</td></tr>
+    <tr><td><b>[6]</b> A S M Asadujjaman et al. APPD: A Blackbox Approach to Verifying NFV Integrity. IEEE CNS, 2021.</td></tr>
+    <tr><td><b>[7]</b> D. Lopez-Pajares et al., A S M Asadujjaman. Amaru: Plug & Play Resilient In-band Control for SDN. IEEE Access, 2019.</td></tr>
+    <tr><td><b>[8]</b> A S M Asadujjaman et al. Fast Control Channel Recovery for Resilient In-band OpenFlow Networks. IEEE NetSoft, 2018.</td></tr>
+    <tr><td><b>[9]</b> A S M Asadujjaman. Enhancement of Ethernet Ring Protection Switching Protocol, 2017.</td></tr>
+    <tr><td><b>[10]</b> T K Roy, M A Mahmud, A S M Asadujjaman, et al. Fiber Optic Link Design for Multilink Systems.</td></tr>
+    <tr><td><b>[11]</b> A S M Asadujjaman et al. FCSEA: A Floodless Carrier-grade Scalable Ethernet Architecture. IEEE ICECE, 2016.</td></tr>
+    <tr><td><b>[12]</b> A S M Asadujjaman et al. Optimization of Ethernet Ring Protection Switching for Adaptive Modulation. IEEE ICCIT, 2016.</td></tr>
+  </table>
+  <p>
+    <a href="https://scholar.google.com/citations?user=hR3oekIAAAAJ&hl=en">Google Scholar</a> |
+    <a href="https://orcid.org/0000-0001-6180-3227">ORCiD</a> |
+    <a href="#experience">Experience</a>
+  </p>
+</section>
 
-      <tr valign="top">
-      <td align="right" class="bibtexnumber">
-      [<a name="asadujjaman2024securing">3</a>]
-      </td>
-      <td class="bibtexitem">
-      Davi Pontes, Fernando Silva, Anderson Melo, Carlos Pamplona Filho, <b>A S M Asadujjaman</b>, Eduardo Falcão, Andrey Brito.
-       Multi-Platform and Vault-Free Attestation of Confidential VMs.
-       In <em>13th Latin-American Symposium on Dependable and Secure Computing</em>, ACM, 2024.
-      [&nbsp;<a href="bibtex_bib.html#asadujjaman2024securing">bib</a>&nbsp;]
+<section id="experience">
+  <h1>Experience</h1>
+  <ul>
+    <li>Lead Engineer, Banglalink Digital Communications Ltd., Dhaka, Bangladesh.</li>
+    <li>Teaching (POD), INSE 6130 (Fall 2021), Concordia University, Canada.</li>
+  </ul>
+  <p><a href="#activities">Professional Activities</a></p>
+</section>
 
-      </td>
-      </tr>
+<section id="activities">
+  <h1>Professional Activities</h1>
+  <ul>
+    <li>Conference Organizer: <a href="https://issre.github.io/2025/">ISSRE'25</a></li>
+    <li>Journal Reviewer: Springer Annals of Telecommunications, Elsevier Computer Networks, IEEE TDSC</li>
+    <li>Conference Reviewer: ESORICS'21</li>
+  </ul>
+  <p><a href="#contact">Contact Information</a></p>
+</section>
 
-      <tr valign="top">
-      <td align="right" class="bibtexnumber">
-      [<a name="oqaily2023tenant">4</a>]
-      </td>
-      <td class="bibtexitem">
-      Momen Oqaily, Suryadipta Majumdar, Lingyu Wang, Mohammad Ekramul Kabir, Yosr Jarraya, <b>A S M Asadujjaman</b>, Makan Pourzandi, Mourad Debbabi.
-       A Tenant-based Two-stage Approach to Auditing the Integrity of Virtual Network Function Chains Hosted on Third-Party Clouds.
-       In <em>13th ACM Conference on Data and Application Security and Privacy</em>, IEEE, 2023.
-      [&nbsp;<a href="bibtex_bib.html#oqaily2023tenant">bib</a>&nbsp;]
-      [&nbsp;<a href="https://arc.encs.concordia.ca/papers/oqaily2023nfvsense.pdf">PDF</a>&nbsp;]
+<section id="contact">
+  <h1>Contact</h1>
+  <p>
+    <b>Address</b><br>
+    Laboratório de Sistemas Distribuidos, Universidade Federal de Campina Grande<br>
+    Campina Grande - PB, 58429-900, Brazil
+  </p>
+  <p>
+    <b>Email</b><br>
+    <img style="background-color:blue; width:300px;" src="lsd.jpeg" alt="Email">
+  </p>
+  <p>
+    <a href="#home">Home</a> |
+  </p>
+</section>
+</main>
 
-      </td>
-      </tr>
+<footer>
+  &copy; A S M Asadujjaman
+</footer>
 
-      <tr valign="top">
-      <td align="right" class="bibtexnumber">
-      [<a name="asadujjaman20225gfiver">5</a>]
-      </td>
-      <td class="bibtexitem">
-      <b>A S M Asadujjaman</b>, Mohammad Ekramul Kabir, Hinddeep Purohit, Suryadipta Majumdar, Lingyu Wang, Yosr Jarraya, Makan Pourzandi.
-       5GFIVer: Functional Integrity Verification for 5G Cloud-native Network Functions.
-       In <em>13th IEEE International Conference on Cloud Computing Technology and Science (CloudCom)</em>, IEEE, 2022.
-      [&nbsp;<a href="bibtex_bib.html#asadujjaman20225gfiver">bib</a>&nbsp;]
-      [&nbsp;<a href="https://arc.encs.concordia.ca/papers/5GFIVer.pdf">PDF</a>&nbsp;]
-      </td>
-      </tr>
-
-      <tr valign="top">
-      <td align="right" class="bibtexnumber">
-      [<a name="asadujjaman2021appd">6</a>]
-      </td>
-      <td class="bibtexitem">
-      <b>A S M Asadujjaman</b>, Momen Oqaily, Yosr Jarraya, Suryadipta Majumdar, Makan Pourzandi, Lingyu Wang and Mourad Debbabi.
-       Artificial Packet-Pair Dispersion (APPD): A Blackbox Approach to Verifying the Integrity of NFV Service Chains.
-       In <em>9th IEEE Conference on Communications and Network Security (CNS 2021)</em>, IEEE, 2021 (Acceptance ratio 32/113&#8776;28%).
-      [&nbsp;<a href="bibtex_bib.html#asadujjaman2021appd">bib</a>&nbsp;]
-      [&nbsp;<a href="https://arc.encs.concordia.ca/papers/APPD_CNS2021.pdf">PDF</a>&nbsp;]
-
-      </td>
-      </tr>
-
-      <tr valign="top">
-      <td align="right" class="bibtexnumber">
-      [<a name="lopez2019amaru">7</a>]
-      </td>
-      <td class="bibtexitem">
-      Diego Lopez-Pajares, Joaquin Alvarez-Horcajo, Elisa Rojas, <b>A S M Asadujjaman</b>, and
-        Isaias Martinez-Yelmo.
-       Amaru: Plug&amp;play resilient in-band control for SDN.
-       <em>IEEE Access</em>, 7:123202--123218, 2019.
-      [&nbsp;<a href="bibtex_bib.html#lopez2019amaru">bib</a>&nbsp;]
-      [&nbsp;<a href="https://www.researchgate.net/publication/335416253_Amaru_Plugplay_resilient_in-band_control_for_SDN/fulltext/5d6481a7458515d610265ffa/Amaru-Plug-play-resilient-in-band-control-for-SDN.pdf">PDF</a>&nbsp;]
-      [&nbsp;<a href="https://github.com/NETSERV-UAH/Amaru">Source Code</a>&nbsp;]
-      </td>
-      </tr>
-      
-      <tr valign="top">
-      <td align="right" class="bibtexnumber">
-      [<a name="asadujjaman2018fast">8</a>]
-      </td>
-      <td class="bibtexitem">
-      <b>A S M Asadujjaman</b>, Elisa Rojas, Mohammad&nbsp;Shah Alam, and Suryadipta Majumdar.
-       Fast control channel recovery for resilient in-band OpenFlow
-        networks.
-       In <em>2018 4th IEEE Conference on Network Softwarization (NetSoft)</em>, pages 19--27. IEEE, 2018 (Acceptance ratio 20/103&#8776;19%).
-      [&nbsp;<a href="bibtex_bib.html#asadujjaman2018fast">bib</a>&nbsp;]
-      [&nbsp;<a href="https://users.encs.concordia.ca/~majumdar/papers/netsoft18-author.pdf">PDF</a>&nbsp;]
-      </td>
-      </tr>
-      
-      
-      <tr valign="top">
-      <td align="right" class="bibtexnumber">
-      [<a name="asadujjaman2017enhancement">9</a>]
-      </td>
-      <td class="bibtexitem">
-      <b>A S M Asadujjaman</b>.
-       Enhancement of ethernet ring protection switching protocol for
-        improving performance of carrier networks.
-       2017.
-      [&nbsp;<a href="bibtex_bib.html#asadujjaman2017enhancement">bib</a>&nbsp;]
-      
-      </td>
-      </tr>
-      
-      
-      <tr valign="top">
-      <td align="right" class="bibtexnumber">
-      [<a name="royfiber">10</a>]
-      </td>
-      <td class="bibtexitem">
-      TK&nbsp;Roy, MA&nbsp;Mahmud, <b>A S M Asadujjaman</b>, MO&nbsp;Khyam, and MNU Mondal.
-       Fiber optic link design for multilink systems.
-      [&nbsp;<a href="bibtex_bib.html#royfiber">bib</a>&nbsp;]
-      
-      </td>
-      </tr>
-      
-      
-      <tr valign="top">
-      <td align="right" class="bibtexnumber">
-      [<a name="asadujjaman2016fcsea">11</a>]
-      </td>
-      <td class="bibtexitem">
-      <b>A S M Asadujjaman</b>, Shafika&nbsp;Showkat Moni, and Mohammad&nbsp;Shah Alam.
-       FCSEA: A floodless carrier-grade scalable ethernet architecture.
-       In <em>2016 9th International Conference on Electrical and Computer
-        Engineering (ICECE)</em>, pages 427--430. IEEE, 2016.
-      [&nbsp;<a href="bibtex_bib.html#asadujjaman2016fcsea">bib</a>&nbsp;]
-      
-      </td>
-      </tr>
-      
-      
-      <tr valign="top">
-      <td align="right" class="bibtexnumber">
-      [<a name="asadujjaman2016optimization">12</a>]
-      </td>
-      <td class="bibtexitem">
-      <b>A S M Asadujjaman</b>, Mohammad&nbsp;Shah Alam, and Shafika&nbsp;Showkat Moni.
-       Optimization of ethernet ring protection switching for adaptive
-        modulation in carrier access network.
-       In <em>2016 19th International Conference on Computer and
-        Information Technology (ICCIT)</em>, pages 19--24. IEEE, 2016.
-      [&nbsp;<a href="bibtex_bib.html#asadujjaman2016optimization">bib</a>&nbsp;]
-      
-      </td>
-      </tr>
-      </table>
-      <p>
-        <a href="https://scholar.google.com/citations?user=hR3oekIAAAAJ&hl=en">See more details on Google Scholar</a><br />
-        <a href="https://orcid.org/0000-0001-6180-3227">See more details on ORCiD</a><br />
-        <a href="javascript:showContent('experience')">Experience</a>
-      </p>
-
-  </div>
-  <div id="experience">
-    <h1>Experience</h1>
-    <hr class="headerline">
-    <ul>
-      <li>Lead Engineer, Banglalink Digital Communications Ltd., Dhaka, Bangladesh.</li>
-      <li>Teaching (POD), INSE 6130 (Fall 2021), Concordia University, Canada.</li>
-    </ul>
-    <a href="javascript:showContent('activities')">Professional Activities</a>
-  </div>
-  <div id="activities">
-    <h1>Professional Activities</h1>
-    <hr class="headerline">
-    <ul>
-      <li>Conference Organizer: <a href="https://issre.github.io/2025/">ISSRE'25</a></li>
-      <li>Journal Paper Reviewer: Springer Annals of Telecommunications, Elsevier Computer Networks, IEEE Transactions on Dependable and Secure Computing (TDSC)</li>
-      <li>Conference Paper Reviewer: ESORICS'21</li>
-    </ul>
-    <a href="javascript:showContent('contact')">Contact Information</a>
-  </div>
-  <div class="content" id="contact">
-    <center>
-    <h1>Contact</h1>   
-    <p>
-      <b>Address</b><br />
-      Laboratório de Sistemas Distribuidos, Universidade Federal de Campina Grande<br />
-      Campina Grande - PB, 58429-900, Brazil<br />
-      <b>e-mail</b><br />
-      <img style="background-color:blue;" width="300px" src="lsd.jpeg" />
-    </p>
-    <a href="javascript:showContent('home')">Home</a> <br />
-    <a href="https://users.encs.concordia.ca/~a_asaduj/">View on concordia.ca</a>
-    </center>
-  </div>
-</div>
-
-<script>
-
-function showContent(divId){
-  if(document.getElementById("mySidebar").offsetWidth == "50"){
-    document.getElementById("mySidebarMenu").style.display = "inline";
-    document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-  }
-  mainContent=document.getElementById("main");
-  for(i=0;i<mainContent.children.length;i++){
-    mainContent.children[i].style.display="none";
-  }
-  document.getElementById(divId).style.display="inline";
-}
-
-function showAll(){
-  mainContent=document.getElementById("main");
-  for(i=0;i<mainContent.children.length;i++){
-    mainContent.children[i].style.display="inline";
-  }
-}
-
-function toggleNav() {
-  if(document.getElementById("mySidebar").offsetWidth == "50"){
-    document.getElementById("mySidebarMenu").style.display = "inline";
-    
-    document.getElementById("mySidebar").style.width = "250px";
-    
-    document.getElementById("main").style.marginLeft = "250px";
-    showContent("home");
-  }
-  else{
-    document.getElementById("mySidebarMenu").style.display = "none";
-    document.getElementById("mySidebar").style.width = "50px";
-    
-    document.getElementById("main").style.marginLeft= "50px";    
-    showAll();
-  }
-  
-}
-</script>
-   
 </body>
-</html> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
